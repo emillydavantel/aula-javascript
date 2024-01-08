@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Login Example</title>
+
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <input id="user" type="text" required />
+            <input id="password" type="password" required />
+            <button id="button" onclick="auth()"> Login </button>
+
+            <div>
+                <div id="success" class="success">
+                    <h1>Sucesso!</h1>
+                </div>
+                <div id="error" class="error">
+                    <h1>Error!</h1>
+                </div>
+
+            </div>
+    </section>
+</body>
+
+<script>
+    let fakeData = {
+        id: 1,
+        name: "Emilly",
+        user: "emilly@gmail.com",
+        password: "123456"
+    }
+
+    function auth() {
+
+        let username = document.getElementById("user").value
+        let password = document.getElementById("password").value
+        let successAccess = document.getElementById("success")
+        let errorAccess = document.getElementById("error")
+
+        if (username === fakeData.user && password === fakeData.password) {
+            successAccess.style.display = "flex"
+
+            setTimeout(() => {
+                window.location.reload()
+            }, 2000)
+
+        } else {
+            errorAccess.style.display = "flex"
+
+            setTimeout(() => {
+                window.location.reload()
+            }, 2000)
+
+        }
+    }
+
+</script>
+
+
+</html>

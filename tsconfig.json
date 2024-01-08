@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2016",
+      "dom"
+    ],
+    "module": "commonJS",
+    "outDir": "dist",
+    "strict": true,
+    "target": "ES2016"
+  }
+}
